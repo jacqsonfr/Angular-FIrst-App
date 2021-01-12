@@ -1,0 +1,33 @@
+#Simple String Array
+<p *ngFor="let task of tasks">
+    {{task}}
+</p>
+
+#Simple Object Array
+
+<div>
+<input #inputDescription type="text" placeholder="Inserir uma nova tarefa">
+<button (click)="addTask(inputDescription.value)">Adicionar nova Tarefa</button>
+
+</div>
+<table>
+    <tr *ngFor="let task of tasks2; let i = index">
+        <ng-container *ngIf="!task.done">
+            <td>
+                <input type="checkbox" [checked]="task.done" >
+            </td>
+            <td>        
+                <label>{{task.description}}</label>
+            </td>
+            <td>
+                <button (click)="delTask(i)">Deletar tarefa</button>
+            </td>
+        </ng-container>
+    </tr>
+</table>
+
+<div [ngSwitch]="tasks2.length">
+    <div *ngSwitchCase="0">Nenhuma tarefa</div>
+    <div *ngSwitchCase="1">Uma tarefa</div>
+    <div *ngSwitchDefault>{{tasks2.length}} tarefas</div>
+</div>
