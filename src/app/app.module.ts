@@ -7,6 +7,8 @@ import { C2Component } from './c2/c2.component';
 import { CounterComponent } from './counter/counter.component';
 import { EstruturalComponent } from './estrutural/estrutural.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { MoviesComponent } from './movies/movies.component';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     C2Component,
     CounterComponent,
     EstruturalComponent,
-    TodoListComponent
+    TodoListComponent,
+    MoviesComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule
