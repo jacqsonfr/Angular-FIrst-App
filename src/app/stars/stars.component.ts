@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-stars',
@@ -8,5 +8,9 @@ import { Component, Input } from '@angular/core';
 export class StarsComponent {
 
   @Input() rating: number = 0;
+  @Output() onRatingChange = new EventEmitter<number>();
 
+  onClick(i: number){
+    this.onRatingChange.emit(i);
+  }
 }

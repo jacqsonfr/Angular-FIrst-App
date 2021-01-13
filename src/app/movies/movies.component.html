@@ -10,7 +10,10 @@
             {{movie.name}}
         </td>
         <td>                       
-            <app-stars [rating]="movie.rating"></app-stars>
+            <app-stars
+             [rating]="movie.rating"
+             (onRatingChange)="movie.rating = $event"
+             ></app-stars>
         </td>
 
     </tr>
