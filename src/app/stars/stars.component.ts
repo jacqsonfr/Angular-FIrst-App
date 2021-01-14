@@ -8,9 +8,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class StarsComponent {
 
   @Input() rating: number = 0;
-  @Output() onRatingChange = new EventEmitter<number>();
+  @Output() ratingChange = new EventEmitter<number>();
 
   onClick(i: number){
-    this.onRatingChange.emit(i);
+    this.ratingChange.emit(i);
   }
 }

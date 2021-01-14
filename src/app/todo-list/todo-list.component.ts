@@ -8,6 +8,7 @@ import { TodoItem } from './todoItem';
 })
 export class TodoListComponent {
 
+  newTask: string = '';
   tasks: string[] =[
     'Arrumar a cama',
     'Fazer o trabalho prático do Bootcamp'
@@ -19,9 +20,9 @@ export class TodoListComponent {
   ]
 
 
-  addTask(description: string){        
+  addTask(){        
     this.tasks2.push({
-      description:description,
+      description:this.newTask,
       done:false
     });
   }

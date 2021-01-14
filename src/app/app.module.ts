@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { C1Component } from './c1.component';
@@ -9,6 +10,7 @@ import { EstruturalComponent } from './estrutural/estrutural.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { MoviesComponent } from './movies/movies.component';
 import { StarsComponent } from './stars/stars.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { StarsComponent } from './stars/stars.component';
     EstruturalComponent,
     TodoListComponent,
     MoviesComponent,
-    StarsComponent
+    StarsComponent,
+    PanelComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
