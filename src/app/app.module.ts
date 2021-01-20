@@ -11,6 +11,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { MoviesComponent } from './movies/movies.component';
 import { StarsComponent } from './stars/stars.component';
 import { PanelComponent } from './panel/panel.component';
+import { RefreshComponent } from './refresh/refresh.component';
+import { Counter2Component } from './counter2/counter2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PanelComponent } from './panel/panel.component';
     TodoListComponent,
     MoviesComponent,
     StarsComponent,
-    PanelComponent
+    PanelComponent,
+    RefreshComponent,
+    Counter2Component
   ],
   imports: [
     BrowserModule,

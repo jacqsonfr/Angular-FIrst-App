@@ -7,6 +7,10 @@ import { TodoItem } from './todoItem';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
+  imgUrl:string ='https://angular.io/assets/images/logos/angular/angular.png';
+  value:number = 1;
+  fotoAtual = 2;
+  totalFotos = 5;
 
   newTask: string = '';
   tasks: string[] =[

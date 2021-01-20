@@ -1,25 +1,48 @@
-Olá
-<c1></c1>
-<app-c2></app-c2>
-<h1>Data Binding Básico</h1>
-<app-counter></app-counter>
+<button (click)="changeStatus(status)">Change View Below</button>
 
-<br>
+<div *ngIf="status">
+    <h1>View part 1</h1>
+    Olá
+    <c1></c1>
+    <app-c2></app-c2>
+    <h1>Data Binding Básico</h1>
+    <app-counter></app-counter>
 
-<br>---------------------------------------------------
-<br>A partir daqui conteúdo estrutural -> ngIF
-<br>---------------------------------------------------<br><br>
-<app-estrutural></app-estrutural>
+    <br>
 
-<br>
+    <br>---------------------------------------------------
+    <br>A partir daqui conteúdo estrutural -> ngIF
+    <br>---------------------------------------------------<br><br>
+    <app-estrutural></app-estrutural>
 
-<br>---------------------------------------------------
-<br>A partir daqui conteúdo estrutural -> ng
-<br>---------------------------------------------------<br><br>
-<app-todo-list></app-todo-list>
+    <br>
+
+    <br>---------------------------------------------------
+    <br>A partir daqui conteúdo estrutural -> ng
+    <br>---------------------------------------------------<br><br>
+    <app-todo-list></app-todo-list>
 
 
-<br>---------------------------------------------------
-<br>A partir daqui Input/Output/Two-Way Bindgind Properties
-<br>---------------------------------------------------
-<app-movies></app-movies>
+    <br>---------------------------------------------------
+    <br>A partir daqui Input/Output/Two-Way Bindgind Properties
+    <br>---------------------------------------------------
+    <app-movies></app-movies>
+</div>
+
+<div *ngIf="!status">
+    <h1>View part 2</h1>
+    <h2>Ciclo de Vida dos Componentes</h2>
+    
+    <h3>ngOnInit and ngOnDestroy</h3>
+    <button (click)="add()">Adicionar</button>
+    
+    <div *ngFor="let id of ids">
+        <app-refresh [id]="id"></app-refresh>        
+        <button (click)="delete(id)">del</button>
+    </div>
+
+    <h3>ngOnChange</h3>
+    <div> Label: <input [(ngModel)]="label"/></div>
+    <app-counter2 [label]="label" [max]="10"></app-counter2>
+
+</div>
